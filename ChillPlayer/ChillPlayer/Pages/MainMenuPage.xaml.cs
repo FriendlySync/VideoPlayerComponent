@@ -1,7 +1,6 @@
 ﻿using ChillPlayer.Models;
 using System;
 using Octane.Xamarin.Forms.VideoPlayer.Constants;
-using Octane.Xamarin.Forms.VideoPlayer.Licensing;
 using Xamarin.Forms;
 
 namespace ChillPlayer.Pages
@@ -15,12 +14,6 @@ namespace ChillPlayer.Pages
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-
-            if (VideoPlayerLicense.LicenseType == LicenseType.Trial || Device.RuntimePlatform == Device.UWP || Device.RuntimePlatform == Device.WinPhone)
-            {
-                //YouTubeButton.IsVisible = false;
-                //VimeoButton.IsVisible = false;
-            }
         }
 
         /// <summary>

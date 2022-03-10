@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace ChillPlayer.Droid
 {
-    [Activity(Label = "Octane.Xamarin.Forms.VideoPlayer", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Octane.Xamarin.Forms.VideoPlayer", LaunchMode = LaunchMode.SingleTask, Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
