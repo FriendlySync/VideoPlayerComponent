@@ -15,8 +15,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Octane.Xam.VideoPlayer" Version="3.1.0" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Octane.Xamarin.Forms.VideoPlayer\Octane.Xamarin.Forms.VideoPlayer.csproj" />
   </ItemGroup>
 
   <ItemGroup>

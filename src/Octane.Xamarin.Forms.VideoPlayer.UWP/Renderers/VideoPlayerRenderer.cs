@@ -423,16 +423,16 @@ namespace Octane.Xamarin.Forms.VideoPlayer.UWP.Renderers
             switch (Element.FillMode)
             {
                 case FillMode.Resize:
-                    Control.Stretch = Stretch.Fill;
+                    Control.Stretch = Windows.UI.Xaml.Media.Stretch.Fill;
                     break;
                 case FillMode.ResizeAspect:
-                    Control.Stretch = Stretch.Uniform;
+                    Control.Stretch = Windows.UI.Xaml.Media.Stretch.Uniform;
                     break;
                 case FillMode.ResizeAspectFill:
-                    Control.Stretch = Stretch.UniformToFill;
+                    Control.Stretch = Windows.UI.Xaml.Media.Stretch.UniformToFill;
                     break;
                 default:
-                    Control.Stretch = Stretch.None;
+                    Control.Stretch = Windows.UI.Xaml.Media.Stretch.None;
                     break;
             }
         }
