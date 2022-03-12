@@ -131,6 +131,8 @@
     <ProjectReference Include="..\..\src\Octane.Xamarin.Forms.VideoPlayer.iOS\Octane.Xamarin.Forms.VideoPlayer.iOS.csproj">
       <Project>{ED8128FF-8AF9-4557-8C4B-94EF5EEDFDC4}</Project>
       <Name>Octane.Xamarin.Forms.VideoPlayer.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
   </ItemGroup>
 </Project>
