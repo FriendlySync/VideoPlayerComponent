@@ -122,6 +122,36 @@ Task("Build")
         settings.UseToolVersion(MSBuildToolVersion.VS2022);
         settings.WithProperty("ContinuousIntegrationBuild", "true");
     });
+
+    if (sign) {
+		var fileList = new List<string>();
+		fileList.Add(@"Octane.Xamarin.Forms.VideoPlayer\bin\Release\netstandard2.0\Octane.Xamarin.Forms.VideoPlayer.dll");
+		
+		fileList.Add(@"Octane.Xamarin.Forms.VideoPlayer.iOS\bin\Release\Octane.Xamarin.Forms.VideoPlayer.dll");
+		fileList.Add(@"Octane.Xamarin.Forms.VideoPlayer.iOS\bin\Release\Octane.Xamarin.Forms.VideoPlayer.iOS.dll");
+		
+		fileList.Add(@"Octane.Xamarin.Forms.VideoPlayer.Android\bin\Release\Octane.Xamarin.Forms.VideoPlayer.dll");
+		fileList.Add(@"Octane.Xamarin.Forms.VideoPlayer.Android\bin\Release\Octane.Xamarin.Forms.VideoPlayer.Android.dll");
+		
+		fileList.Add(@"Octane.Xamarin.Forms.VideoPlayer.UWP\bin\x86\Release\Octane.Xamarin.Forms.VideoPlayer.dll");
+		fileList.Add(@"Octane.Xamarin.Forms.VideoPlayer.UWP\bin\x86\Release\Octane.Xamarin.Forms.VideoPlayer.UWP.dll");
+		
+		fileList.Add(@"Octane.Xamarin.Forms.VideoPlayer.WPF\bin\Release\Octane.Xamarin.Forms.VideoPlayer.dll");
+		fileList.Add(@"Octane.Xamarin.Forms.VideoPlayer.WPF\bin\Release\Octane.Xamarin.Forms.VideoPlayer.WPF.dll");
+
+		var fullPaths = new List<string>();
+		foreach(string file in fileList)
+		{
+			string tmp = PathCombine(SCRIPT_DIR, file);
+			string fullFilePath = AsPlatformPath(new FilePath(tmp));
+			fullPaths.Add(fullFilePath);
+		}
+
+        Sign(fullPaths, new SignToolSignSettings {
+            TimeStampUri = new Uri("http://timestamp.digicert.com"),
+            CertSubjectName = "TotalSync"
+        });
+	}
 });
 
 Task("BuildNuget")

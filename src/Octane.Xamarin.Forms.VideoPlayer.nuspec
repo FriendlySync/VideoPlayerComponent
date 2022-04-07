@@ -47,11 +47,11 @@
 		<file src="Octane.Xamarin.Forms.VideoPlayer.UWP\bin\x86\Release\Octane.Xamarin.Forms.VideoPlayer.UWP.xml" target="lib\uap10.0\Octane.Xamarin.Forms.VideoPlayer.UWP.xml" />
 		
 		<!-- WPF reference assemblies -->
-		<file src="Octane.Xamarin.Forms.VideoPlayer.WPF\bin\Release\Octane.Xamarin.Forms.VideoPlayer.dll" target="lib\net471\Octane.Xamarin.Forms.VideoPlayer.dll" />
-		<file src="Octane.Xamarin.Forms.VideoPlayer.WPF\bin\Release\Octane.Xamarin.Forms.VideoPlayer.pdb" target="lib\net471\Octane.Xamarin.Forms.VideoPlayer.pdb" />
-		<file src="Octane.Xamarin.Forms.VideoPlayer.WPF\bin\Release\Octane.Xamarin.Forms.VideoPlayer.xml" target="lib\net471\Octane.Xamarin.Forms.VideoPlayer.xml" />
-		<file src="Octane.Xamarin.Forms.VideoPlayer.WPF\bin\Release\Octane.Xamarin.Forms.VideoPlayer.WPF.dll" target="lib\net471\Octane.Xamarin.Forms.VideoPlayer.WPF.dll" />
-		<file src="Octane.Xamarin.Forms.VideoPlayer.WPF\bin\Release\Octane.Xamarin.Forms.VideoPlayer.WPF.xml" target="lib\net471\Octane.Xamarin.Forms.VideoPlayer.WPF.xml" />
-		<file src="Octane.Xamarin.Forms.VideoPlayer.WPF\bin\Release\Octane.Xamarin.Forms.VideoPlayer.WPF.pdb" target="lib\net471\Octane.Xamarin.Forms.VideoPlayer.WPF.pdb" />
+		<file src="Octane.Xamarin.Forms.VideoPlayer.WPF\bin\Release\Octane.Xamarin.Forms.VideoPlayer.dll" target="lib\net461\Octane.Xamarin.Forms.VideoPlayer.dll" />
+		<file src="Octane.Xamarin.Forms.VideoPlayer.WPF\bin\Release\Octane.Xamarin.Forms.VideoPlayer.pdb" target="lib\net461\Octane.Xamarin.Forms.VideoPlayer.pdb" />
+		<file src="Octane.Xamarin.Forms.VideoPlayer.WPF\bin\Release\Octane.Xamarin.Forms.VideoPlayer.xml" target="lib\net461\Octane.Xamarin.Forms.VideoPlayer.xml" />
+		<file src="Octane.Xamarin.Forms.VideoPlayer.WPF\bin\Release\Octane.Xamarin.Forms.VideoPlayer.WPF.dll" target="lib\net461\Octane.Xamarin.Forms.VideoPlayer.WPF.dll" />
+		<file src="Octane.Xamarin.Forms.VideoPlayer.WPF\bin\Release\Octane.Xamarin.Forms.VideoPlayer.WPF.xml" target="lib\net461\Octane.Xamarin.Forms.VideoPlayer.WPF.xml" />
+		<file src="Octane.Xamarin.Forms.VideoPlayer.WPF\bin\Release\Octane.Xamarin.Forms.VideoPlayer.WPF.pdb" target="lib\net461\Octane.Xamarin.Forms.VideoPlayer.WPF.pdb" />
 	</files>
 </package>
