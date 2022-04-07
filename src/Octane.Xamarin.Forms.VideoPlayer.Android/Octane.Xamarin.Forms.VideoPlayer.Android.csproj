@@ -3,6 +3,14 @@
   <Import Project="..\..\ChillPlayer\packages\Xamarin.Forms.5.0.0.2337\build\Xamarin.Forms.props" Condition="Exists('..\..\ChillPlayer\packages\Xamarin.Forms.5.0.0.2337\build\Xamarin.Forms.props')" />
   <Import Project="..\packages\Xamarin.Forms.4.0.0.497661\build\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.4.0.0.497661\build\Xamarin.Forms.props')" />
   <PropertyGroup>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    <RepositoryUrl>https://github.com/FriendlySync/EfficientControls</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+  <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
@@ -116,6 +124,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>CommonAssemblyInfo.cs</Link>
+    </Compile>
     <Compile Include="Constants\MediaPlayerStatus.cs" />
     <Compile Include="Diagnostics\AndroidLogger.cs" />
     <Compile Include="ExtensionMethods\ContextExtensions.cs" />
@@ -137,6 +148,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub">
+      <Version>1.1.1</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.CustomTabs">
       <Version>28.0.0.3</Version>
     </PackageReference>

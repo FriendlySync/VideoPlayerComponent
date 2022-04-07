@@ -301,7 +301,9 @@ namespace Octane.Xamarin.Forms.VideoPlayer.Android.Renderers
         {
             Element.SetValue(VideoPlayer.IsLoadingPropertyKey, false);
             Element.OnPlayerStateChanged(CreateVideoPlayerStateChangedEventArgs(PlayerState.Prepared));
-
+            Element.VideoHeight = Control.Player.VideoHeight;
+            Element.VideoWidth = Control.Player.VideoWidth;
+            Element.OnOpened?.Invoke();
             // Player Setup
             UpdateDisplayControls();
             UpdateVolume();

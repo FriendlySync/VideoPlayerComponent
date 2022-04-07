@@ -10,9 +10,9 @@ This is the official repository for the Xamarin Forms Video Player component.
 
 1. **[Install via NuGet](http://www.nuget.org/packages/Octane.Xam.VideoPlayer)**.
 
-2. Once you install it, **[Follow the Getting Started guide](https://github.com/adamfisher/Xamarin.Forms.VideoPlayer/blob/master/GettingStarted.md)**.
+2. Once you install it, **[Follow the Getting Started guide](https://github.com/FriendlySync/VideoPlayerComponent/blob/master/GettingStarted.md)**.
 
-![s](https://github.com/adamfisher/Xamarin.Forms.VideoPlayer/blob/master/screenshots/screenshot1.png?raw=true)
+![s](https://github.com/FriendlySync/VideoPlayerComponent/blob/master/screenshots/screenshot1.png?raw=true)
 
 ## Introduction
 

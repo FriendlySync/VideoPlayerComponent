@@ -2,22 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>3.1.0</Version>
-    <Authors></Authors>
-    <Company>Octane Software, LLC</Company>
-    <Product>Xamarin.Forms Video Player</Product>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageId>Octane.Xam.VideoPlayer</PackageId>
-    <Copyright>Copyright © 2019</Copyright>
-    <PackageLicenseUrl>https://github.com/adamfisher/Xamarin.Forms.VideoPlayer/blob/master/License.md</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/adamfisher/Xamarin.Forms.VideoPlayer</PackageProjectUrl>
-    <PackageIconUrl>https://github.com/adamfisher/Xamarin.Forms.VideoPlayer/raw/master/icons/VideoPlayer_128x128.png</PackageIconUrl>
-    <PackageTags>xamarin forms xamarin.forms ios android windows phone mobile video portable ui AVPlayer MediaPlayer AVPlayerViewController MediaElement pcl xam.pcl wp8 winphone UWP</PackageTags>
-    <Description>A Xamarin Forms control to render the native video player on every platform.</Description>
   </PropertyGroup>
 
   <PropertyGroup>
     <DocumentationFile>bin\$(Configuration)\netstandard1.4\Octane.Xamarin.Forms.VideoPlayer.xml</DocumentationFile>
+    <Product>TotalSync Video Component</Product>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+	<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    <RepositoryUrl>https://github.com/FriendlySync/EfficientControls</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,6 +22,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
   </ItemGroup>
 

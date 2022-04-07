@@ -190,6 +190,34 @@ namespace Octane.Xamarin.Forms.VideoPlayer
 
         #endregion
 
+        /// <summary>
+        /// Video height property
+        /// </summary>
+        public static readonly BindableProperty VideoHeightProperty = BindableProperty.Create(nameof(VideoHeight), typeof(double), typeof(VideoPlayer), (double)0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public double VideoHeight
+        {
+            get => (double)GetValue(VideoHeightProperty);
+            set => SetValue(VideoHeightProperty, value);
+        }
+
+        /// <summary>
+        /// Video width property
+        /// </summary>
+        public static readonly BindableProperty VideoWidthProperty = BindableProperty.Create(nameof(VideoWidth), typeof(double), typeof(VideoPlayer), (double)0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public double VideoWidth
+        {
+            get => (double)GetValue(VideoWidthProperty);
+            set => SetValue(VideoWidthProperty, value);
+        }
+
         //#region FullScreen
 
         ///// <summary>
@@ -309,6 +337,23 @@ namespace Octane.Xamarin.Forms.VideoPlayer
             set => SetValue(SourceProperty, value);
         }
 
+        /// <summary>
+        /// The source bindable property.
+        /// </summary>
+        public static readonly BindableProperty VideoPathProperty = BindableProperty.Create(nameof(VideoPath), typeof(string), typeof(string), "");
+
+        /// <summary>
+        /// A local file path
+        /// </summary>
+        /// <value>
+        /// The path where this video file is located.
+        /// </value>
+        public string VideoPath
+        {
+            get => GetValue(VideoPathProperty).ToString();
+            set => SetValue(VideoPathProperty, value);
+        }
+
         #endregion
 
         #endregion
@@ -408,13 +453,31 @@ namespace Octane.Xamarin.Forms.VideoPlayer
 			}
         }
 
+        /// <summary>
+        /// Event for WPF platform when screen mode is changed
+        /// </summary>
+        /// <param name="isFullscreen"></param>
+        public delegate void ChangeFullScreen(bool isFullscreen);
+        public ChangeFullScreen OnChangeFullScreen;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public delegate void Opened();
+        public Opened OnOpened;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public delegate void Ended();
+        public Ended OnEnded;
         #endregion
 
         #region Commands
 
-		/// <summary>
-		/// The play command property.
-		/// </summary>
+        /// <summary>
+        /// The play command property.
+        /// </summary>
         public static readonly BindableProperty PlayCommandProperty = BindableProperty.Create(nameof(PlayCommand), typeof(ICommand), typeof(VideoPlayer), null);
 
         /// <summary>

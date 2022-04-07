@@ -5,6 +5,6 @@
              xmlns:o="clr-namespace:Octane.Xamarin.Forms.VideoPlayer;assembly=Octane.Xamarin.Forms.VideoPlayer"
              x:Class="ChillPlayer.Pages.FullScreenVideoPlayerPage">
   
-  <o:VideoPlayer x:Name="videoPlayer" Source="{me:VideoResource video.mp4}" AutoPlay="True" />
+  <o:VideoPlayer x:Name="videoPlayer" Source="{me:VideoResource video.mp4}" AutoPlay="True" FillMode="ResizeAspect"/>
   
 </ContentPage>

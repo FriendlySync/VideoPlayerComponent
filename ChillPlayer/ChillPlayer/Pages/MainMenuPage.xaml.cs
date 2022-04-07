@@ -55,6 +55,8 @@ namespace ChillPlayer.Pages
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            if (Device.RuntimePlatform == Device.WPF)
+                VideoPlayer.VideoPath = @"D:\Upwork\George\VideoPlayerComponent\ChillPlayer\ChillPlayer\Videos\snow.mp4";
             VideoPlayer.Play();
 
             // We need to hide the main menu splash screen video when navigating to a new page
