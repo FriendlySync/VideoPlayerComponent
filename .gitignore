@@ -1,8 +1,9 @@
 */packages
 
 # Build related
-main/tools/*/
-main/tools/packages.config.*
+src/tools/*/
+src/tools/packages.config.*
+src/nupkg_unsigned/
 
 # Xamarin.Android Resource.Designer.cs files
 **/*.Droid/**/[Rr]esource.[Dd]esigner.cs
