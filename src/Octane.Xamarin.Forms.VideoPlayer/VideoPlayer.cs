@@ -340,18 +340,18 @@ namespace Octane.Xamarin.Forms.VideoPlayer
         /// <summary>
         /// The source bindable property.
         /// </summary>
-        public static readonly BindableProperty VideoPathProperty = BindableProperty.Create(nameof(VideoPath), typeof(string), typeof(string), "");
+        public static readonly BindableProperty RootPathProperty = BindableProperty.Create(nameof(RootPath), typeof(string), typeof(string), "");
 
         /// <summary>
-        /// A local file path
+        /// A root folder path for UWP platform
         /// </summary>
         /// <value>
-        /// The path where this video file is located.
+        /// The path with access.
         /// </value>
-        public string VideoPath
+        public string RootPath
         {
-            get => GetValue(VideoPathProperty).ToString();
-            set => SetValue(VideoPathProperty, value);
+            get => GetValue(RootPathProperty).ToString();
+            set => SetValue(RootPathProperty, value);
         }
 
         #endregion

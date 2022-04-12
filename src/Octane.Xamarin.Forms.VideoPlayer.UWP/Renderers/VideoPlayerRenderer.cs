@@ -15,6 +15,9 @@ using Octane.Xamarin.Forms.VideoPlayer.UWP.Renderers;
 using Octane.Xamarin.Forms.VideoPlayer.UWP.SourceHandlers;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.UWP;
+using Windows.Storage;
+using Windows.Storage.Streams;
+using System.IO;
 
 [assembly: ExportRenderer(typeof(VideoPlayer), typeof(VideoPlayerRenderer))]
 
@@ -347,29 +350,17 @@ namespace Octane.Xamarin.Forms.VideoPlayer.UWP.Renderers
             try
             {
                 Element.SetValue(VideoPlayer.IsLoadingPropertyKey, true);
-                var source = Element?.Source;
-                var videoSourceHandler = VideoSourceHandler.Create(source);
-
-                if (source != null && videoSourceHandler != null)
-                {
-                    var path = await videoSourceHandler.LoadVideoAsync(source, new CancellationToken());
-                    Log.Info($"Video Source: {path}");
-                    
-                    if (string.IsNullOrEmpty(path))
-                    {
-                        Control.Source = null;
-                    }
-                    else
-                    {
-                        Control.Source = new Uri(path);
-                        Element.SetValue(VideoPlayer.CurrentTimePropertyKey, TimeSpan.Zero);
-                        Element.OnPlayerStateChanged(CreateVideoPlayerStateChangedEventArgs(PlayerState.Initialized));
-                    }
-                }
-                else
-                {
-                    Control.Source = null;
-                }
+                var pathRoot = Element.RootPath;
+                StorageFolder folderRoot = await StorageFolder.GetFolderFromPathAsync(pathRoot);
+                FileVideoSource source = (FileVideoSource)Element.Source;
+                string filepath = source.File;
+                string clearPath = filepath.Substring(pathRoot.Length).Trim(Path.DirectorySeparatorChar);
+                StorageFile fileVideo = await folderRoot.GetFileAsync(clearPath);
+                Stream stream = await fileVideo.OpenStreamForReadAsync();
+                IRandomAccessStream streamV = stream.AsRandomAccessStream();
+                Control.SetSource(streamV, "video/mp4");
+                Element.SetValue(VideoPlayer.CurrentTimePropertyKey, TimeSpan.Zero);
+                Element.OnPlayerStateChanged(CreateVideoPlayerStateChangedEventArgs(PlayerState.Initialized));
             }
             catch(Exception ex)
             {
