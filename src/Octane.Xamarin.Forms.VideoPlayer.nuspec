@@ -8,14 +8,16 @@
 	<license type="expression">MIT</license>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectUrl>https://github.com/FriendlySync/VideoPlayerComponent</projectUrl>
-    <icon>images\VideoPlayer_128x128.png</icon>
+    <icon>icon.png</icon>
     <description>A Xamarin Forms control to render the native video player on every platform.</description>
     <copyright>Copyright © TotalSync, 2022</copyright>
+    <readme>README.MD</readme>
     <tags>video player videoplayer xamarin forms xamarin.forms ios android windows phone mobile portable ui AVPlayer MediaPlayer AVPlayerViewController MediaElement UWP WPF</tags>
   </metadata>
 	<files>
 		<!-- General files -->
-		<file src="..\icons\VideoPlayer_128x128.png" target="images\" />
+		<file src="..\icons\VideoPlayer_128x128.png" target="icon.png" />
+		<file src="..\README.MD" target="README.MD" />
 
 		<!-- Cross-platform reference assemblies -->
 		<file src="Octane.Xamarin.Forms.VideoPlayer\bin\Release\netstandard2.0\Octane.Xamarin.Forms.VideoPlayer.dll" target="lib\netstandard2.0\Octane.Xamarin.Forms.VideoPlayer.dll" />
