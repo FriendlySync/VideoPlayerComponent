@@ -90,7 +90,8 @@ namespace Octane.Xamarin.Forms.VideoPlayer.WPF.Renderers
             {
                 _mediaElementWithControls = new MediaElementWithControls();
                 _mediaElement = _mediaElementWithControls.mainMediaElement;
-                _mediaElement.Source = new Uri("file:///" + Element.VideoPath);
+                FileVideoSource source = (FileVideoSource)Element.Source;
+                _mediaElement.Source = new Uri("file:///" + source.File);
                 _mediaElement.LoadedBehavior = MediaState.Manual;
                 //_mediaElement.MediaOpened += MediaElement_MediaOpened;
                 //_mediaElement.MediaEnded += MediaElement_MediaEnded;
@@ -169,7 +170,8 @@ namespace Octane.Xamarin.Forms.VideoPlayer.WPF.Renderers
 
         private Task UpdateSource()
         {
-            _mediaElement.Source = new Uri("file:///" + Element.VideoPath);
+            FileVideoSource source = (FileVideoSource)Element.Source;
+            _mediaElement.Source = new Uri("file:///" + source.File);
             return Task.CompletedTask;
         }
 
